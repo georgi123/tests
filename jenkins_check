@@ -1,0 +1,48 @@
+<<<<<<< HEAD
+#!/bin/bash	
+=======
+#!/bin/bash
+>>>>>>> 883cedaf8013fe51a9a1d9b3de3ff283934fbf53
+
+USER="$1"
+
+if (! egrep "$USER" /etc/passwd > /dev/null); then
+
+  echo "jenkins is not installed" && exit 1
+
+<<<<<<< HEAD
+ else 
+  echo "Jenkins was installed" 
+=======
+ else
+  echo "Jenkins was installed"
+>>>>>>> 883cedaf8013fe51a9a1d9b3de3ff283934fbf53
+
+fi
+
+systemctl status jenkins > /dev/null
+
+STATUS="$?"
+
+
+if [ ${STATUS} -eq "0" ]
+
+
+ then
+
+  echo "jenkins is running" && exit 0
+<<<<<<< HEAD
+ else 
+  echo "jenkins will be started"
+  systemctl start jenkins  
+  echo $?
+fi
+
+
+=======
+ else
+  echo "jenkins will be started"
+  systemctl start jenkins
+  echo $?
+fi
+>>>>>>> 883cedaf8013fe51a9a1d9b3de3ff283934fbf53

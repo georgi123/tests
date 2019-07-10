@@ -1,0 +1,24 @@
+#!/bin/bash
+printf 'list users or groups'
+
+echo 
+
+read ops
+
+case $ops in
+     -h|help)
+          echo "for help -h"
+          echo "for list user -l"
+          echo "for list group -g"
+           
+          ;;
+     -u|users)
+          awk -F ":" '{print $1}' /etc/passwd 
+          ;;
+     -g|group)
+          awk -F ":" '{print $1}' /etc/group
+          ;; 
+     *)
+          echo "what do you whant?"
+          ;;
+esac

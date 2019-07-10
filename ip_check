@@ -1,0 +1,15 @@
+
+
+if ( ! ifconfig -a|egrep eth )
+ then
+  echo "new naming convention was added"
+ 
+  else
+   ip a 
+    echo
+      ip r s
+    echo
+      ip link show 
+fi
+ 
+    
